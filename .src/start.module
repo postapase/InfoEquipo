@@ -1,0 +1,39 @@
+' Gambas module file
+
+' scheduled by postapase
+' created from viernes 28 mayo 2021
+
+Public Sub Main()
+
+  Print "comenzando"
+
+  Select Case Args.Count
+    Case 1
+      ' Print "nombre aplicacion=" & Args[0]
+    Case 2
+      Select Case Args[1]
+        Case "--help"
+          PrintHelp
+        Case "--cpu"
+          Print "info cpu"
+          Quit
+        Case "--memory"
+          Print "info memoria"
+          Quit
+        Case Else
+          Print "unknown command"
+      End Select
+
+    Case 3
+
+    Case Else
+
+  End Select
+
+  FMain.Show
+
+End
+
+Public Sub PrintHelp()
+
+End
